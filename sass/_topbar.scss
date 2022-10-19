@@ -1,0 +1,93 @@
+@use "variables";
+.navbar__container {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);    
+    background-color: variables.$white-color;
+    width: 100%;
+    padding: 12px 0% 12px 5%;
+    .topbar__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            font-family: variables.$font-family-title;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2em;
+            line-height: 1em;
+            color: variables.$blue-color;
+            word-spacing: -8px;
+        }
+        .nav__checkbox {
+            display: none;
+        }
+        .nav__toggle {
+            cursor: pointer;
+            margin-right: 5%;
+            .closedmenu {
+                display: none;
+            }
+        }
+    }
+    .nav__options {
+        list-style-type: none;
+        display: none;
+        .nav__list {
+            .nav__list__a {
+                font-family: variables.$font-family-text;
+                font-style: normal;
+                font-weight: bold;
+                letter-spacing: 0.205em;
+                font-size: 0.688em;
+                line-height: 0.4054em;
+                align-content: center;
+                text-decoration: none;
+                color: variables.$grey-color;
+            }
+            .nav__list__a:hover {
+                color: variables.$black-color;
+                font-style: normal;
+            }    
+        }
+    }
+}
+    #nav__checkbox:checked ~ ul.nav__options li {
+        display: block;
+    }
+    #nav__checkbox:checked ~ label.nav__toggle .closedmenu {
+        display: block;
+    }
+    #nav__checkbox:checked ~ label.nav__toggle .openmenu {
+        display: none;
+    }
+@media (min-width: 1000px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .topbar__container {
+            .logo {
+                word-spacing: normal;
+            }
+            .nav__toggle {
+                display: none;
+            }
+        }
+        .nav__options {
+            display: flex;
+            right: 0;
+            bottom: 27px;
+            .nav__list__a {
+                padding: 0% 50px;
+            }       
+        }        
+        .nav__list__a:hover {
+            padding-bottom: 17px;
+            border-bottom: 3px solid variables.$blue-color;
+            font-weight: bold;
+            color: variables.$black-color;
+          }
+    }
+}

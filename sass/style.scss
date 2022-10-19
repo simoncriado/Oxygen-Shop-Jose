@@ -1,0 +1,17 @@
+@use "variables";
+@use "topbar";
+@use "why-us";
+@use "benefits";
+@use "prices";
+@use "contact";
+@use "footer";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+}

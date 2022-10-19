@@ -1,0 +1,33 @@
+@use "variables";
+.footer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 20px 40px variables.$black-color-shadow;
+    top: 200px;
+    padding: 30px 10%;
+    .footer__information {
+        .logo__footer {
+            font-family: variables.$font-family-title;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.625em;
+            line-height: 1em;
+            color: variables.$blue-color;
+            word-spacing: -8px;
+        }
+        .footer__text {
+            font-family: variables.$font-family-text;
+            font-size: 0.688em;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 0.938em;
+            color: variables.$grey-color;
+            padding-top: 5px;
+
+        }
+    }
+    // .social__media {
+    // }
+}

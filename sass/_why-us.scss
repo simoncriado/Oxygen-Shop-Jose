@@ -1,0 +1,87 @@
+@use "variables";
+.sales {
+    margin-top: 150px;
+    position: relative;
+    text-align: center;
+    font-family: variables.$font-family-text;
+    font-style: normal;
+    .sales__title {
+        font-size: 1.875em;
+        font-weight: 400;
+        line-height: 2.568em;
+    }
+    .sales__description {
+        font-weight: 400;
+        text-align: center;
+        font-size: 0.875em;
+        padding-bottom: 28px;
+    }
+}
+    .button__shop {
+        background-color: variables.$blue-color;
+        box-shadow: 5px 10px 14px variables.$blue-color-shadow;
+        border-radius: 40px;
+        font-family: variables.$font-family-text;
+        font-size: 1em;
+        font-weight: 700;
+        line-height: 1.375em;
+        color: variables.$white-color;
+        padding: 22px 91px 23px 92px;
+        border: none;
+    }
+.sales__backgroundm {
+    padding-top: 51px;
+}
+.sales__backgroundd {
+    display: none;
+}
+.sales__background {
+    width: 100%;
+}
+.sales__container {
+    .sales__phrase {
+        font-family: variables.$font-family-title;
+        font-size: 1.875em;
+        font-weight: 400;
+        padding-bottom: 70px;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+.sales__img__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .sales__img {
+        padding-top: 5%;
+    }
+}
+@media (min-width: 1000px) {
+    .sales {
+        .sales__title {
+            margin-bottom: -35px;
+            font-size: 3.063em; 
+            line-height: 3.563em; 
+        }
+        .sales__description {
+            padding: auto;
+            font-size: 1em; 
+            line-height: 1.375em;
+        }
+        .button__shop {
+            width: 25%;
+        }
+        .sales__backgroundm {
+            display: none;
+        }
+        .sales__backgroundd {
+            display: block;
+        }
+        .sales__img__container {
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 70%;
+            margin-left: 18%;
+        }
+    }
+}

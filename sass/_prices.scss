@@ -1,0 +1,190 @@
+@use "variables";
+.conditions {
+    display: block;
+    position: relative;
+    .pricing__title {
+        font-family: variables.$font-family-title;
+        font-size: 2.25em;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: -40px;
+    }
+    .pricing__box {
+        display: block;
+        .pricing__container {
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin: 60px 8%;
+            left: 0;
+            width: 80%;
+            height: 400px;
+            .pricing__category {
+                margin-left: 10%;
+                text-align: center;
+                .pricing__rate {
+                    font-family: variables.$font-family-title;
+                    font-size: 1.25em;
+                    font-weight: 700;
+                    color: variables.$blue-color-category;
+                }
+                .pricing__ammount {
+                    font-family: variables.$font-family-text;
+                    font-size: 2.875em;
+                    font-weight: 300;
+                }
+                .pricing__offer {
+                    font-family: variables.$font-family-title;
+                    font-size: 0.75em;
+                    font-weight: 700;
+                    color: variables.$blue-color-category;
+                }
+            }
+            .pricing__dates {
+                position: absolute;
+                right: 38%;
+                font-family: variables.$font-family-text;
+                font-size: 0.875em;
+                font-weight: 400;
+                color: variables.$black-color;
+                width: 50%;
+                .pricing__info {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    margin-left: 80%;
+                    padding: 10px 0;
+                    .pricing__check {
+                        border: 1px solid variables.$green-color;
+                        border-radius: 2px;
+                        width: 10%;
+                        margin-right: 5%;
+                    }
+                    .pricing__negative {
+                        border: 1px solid variables.$red-color;
+                        border-radius: 2px;
+                        width: 10%;
+                        margin-right: 5%;
+                    }
+                }
+            }
+            .pricing__button {
+                .button {
+                display: block;
+                position: absolute;
+                left: 35%;
+                bottom: -25px;
+                width: 35%;
+                height: 50px;
+                color: variables.$white-color;
+                border-radius: 23px;
+                font-family: variables.$font-family-text;
+                font-size: 0.813em;
+                line-height: 1.106em;
+                font-weight: 700;
+                }
+            }
+        }
+        .pricing__container:hover {
+            transform: scale(1.10);
+            transition: all 0.5s;
+        }
+        .pricing__container:not(:hover) {
+            transition: all 0.5s;
+        }
+        .pricing__container.red {
+            border: 1px solid variables.$red-color;
+            border-radius: 25px;
+            .pricing__ammount {
+                color: variables.$red-color;
+            }
+            .button__red {
+                border: 1px solid variables.$red-color-pricing;
+                background: variables.$red-color-pricing;
+            }
+            .button__red:hover {
+                background-color: variables.$red-color-hover;
+            }
+        }
+        .pricing__container.red:hover {
+            box-shadow: 5px 10px 14px variables.$red-color-hover
+        }
+        .pricing__container.blue {
+            border: 1px solid variables.$blue-color;
+            border-radius: 25px;
+            .pricing__ammount {
+                color: variables.$blue-color;
+            }
+            .button__blue {
+                border: 1px solid variables.$blue-color;
+                background: variables.$blue-color;
+            }
+            .button__blue:hover {
+                background-color: variables.$blue-color-hover;
+            }
+        }
+        .pricing__container.blue:hover {
+            box-shadow: 5px 10px 14px variables.$blue-color-hover;
+        }
+        .pricing__container.cyan {
+            border: 1px solid variables.$cyan-color;
+            border-radius: 25px;
+            .pricing__ammount {
+                color: variables.$cyan-color;
+            }
+            .button__cyan {
+                border: 1px solid variables.$cyan-color;
+                background: variables.$cyan-color;
+            }
+            .button__cyan:hover {
+                background-color: variables.$cyan-color-hover;
+            }
+        }
+        .pricing__container.cyan:hover {
+            box-shadow: 5px 10px 14px variables.$cyan-color-hover;
+        }
+    }
+}
+@media (min-width: 1000px) {
+    .conditions {
+        .pricing__box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .pricing__container {
+                display: flex;
+                position: relative;
+                left: 0;
+                top: 30px;
+                flex-direction: column;
+                width: 100%;
+                height: 460px;
+                .pricing__category {
+                    margin: 40px 0;
+                }
+                .pricing__dates {
+                    position: absolute;
+                    bottom: 80px;
+                    left: 0;
+                    top: 160px;
+                    .pricing__info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 50%;
+                        .pricing__check {
+                            width: 5%;
+                            margin-right: 5%;
+                        }
+                        .pricing__negative {
+                            width: 5%;
+                            margin-right: 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

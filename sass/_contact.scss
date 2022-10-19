@@ -1,0 +1,132 @@
+@use "variables";
+.communication {
+    display: block;
+    position: relative;
+    left: 7%;
+    .contact__question {
+        font-family: variables.$font-family-title;
+        font-size: 2.5em;
+        font-weight: 400;
+        color: variables.$black-color;
+        padding-bottom: 10px;
+    }
+    .contact__answer {
+        font-family: variables.$font-family-text;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    .contact__data {
+        margin-top: 40px;
+        width: 100%;
+        font-family: variables.$font-family-text;
+        font-size: 1em;
+        font-weight: 600;
+        color: variables.$grey-color;
+        .contact__email {
+            display: flex;
+            margin-top: 15px;
+            .contact__icon {
+                margin-right: 2%;
+            }
+        }
+        .contact__phone {
+            display: flex;
+            margin-top: 15px;
+            .contact__icon {
+                margin-right: 2%;
+            }
+        }
+    }
+    .contact__form {
+        font-family: variables.$font-family-text;
+        font-size: 0.688em;
+        font-weight: 600;
+        color: variables.$blue-color;
+        margin-top: 60px;
+        letter-spacing: 0.205em;
+        .clientname {
+            display: block;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-color: variables.$grey-color-input;
+            min-width: 85%;
+            margin: 40px 0;
+            outline: none;
+        }
+        .clientemail {
+            display: block;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-color: variables.$grey-color-input;
+            min-width: 85%;
+            margin-top: 40px;
+            outline: none;
+        }
+        .client__text:focus {
+            border-color: variables.$blue-color;
+        }
+        .contact__information {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            width: 60%;
+            .conditions {
+                margin-right: 4%;
+            }
+            .textcheck {
+                color: variables.$grey-color-conditions;
+                font-family: variables.$font-family-text;
+                font-size: 1.302em;
+                line-height: 1.400em;
+                font-weight: 400;
+                letter-spacing: normal;
+            }
+            .button__submit {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            width: 60%;
+            left: 40%;
+            margin: 20px 30px 30px 0px;
+            background-color: variables.$blue-color;
+            color: variables.$white-color;
+            font-family: variables.$font-family-text;
+            font-weight: 700;
+            border-radius: 35px;
+            width: 50%;
+            height: 57px;
+            border: none;
+            }
+            .button__submit:hover {
+            box-shadow: 5px 2px 14px variables.$blue-color;
+            }
+        }
+    }
+}
+@media (min-width: 1000px) {
+    .communication {
+        top: 200px;
+        left: 20%;
+        .contact__data {
+            display: flex;
+            align-items: center;
+            left: 0;
+            .contact__email {
+                width: 12%;
+                margin: 0;
+                .contact__icon {
+                    margin-right: 5%;
+                }
+            }
+            .contact__phone {
+                width: 12%;
+                margin: 0;
+                .contact__icon {
+                    margin-right: 5%;
+                }
+            }
+        }
+    }
+}
