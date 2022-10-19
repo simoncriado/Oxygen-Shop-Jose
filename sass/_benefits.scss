@@ -1,0 +1,143 @@
+@use "variables";
+.products {
+    display: block;
+    position: relative;
+    background-color: variables.$grey-color-background;
+    font-family: variables.$font-family-title;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    .products__container {
+        display: block;
+        background-color: variables.$white-color;
+        border: 1px solid variables.$grey-color-border;
+        border-radius: 5px;
+        margin: 50px 5%;
+        text-align: left;
+        .products__list {
+            display: flex;
+            position: relative;
+            .products__foreground {
+                margin: auto;
+                width: 60%;
+                z-index: 1;
+                margin-top: 50px;
+            }
+        }
+        .products__description {
+            display: block;
+            margin: 30px 15%;
+            .products__title {
+                font-family: variables.$font-family-title;
+                font-size: 1.875em;
+                font-weight: 400;
+            }
+            .products__text {
+                font-family: variables.$font-family-text;
+                padding-top: 25px;
+                font-size: 0.875em;
+                font-weight: 400;
+                width: 100%;
+            }
+            .products__line {
+                display: none;
+                border: 2px solid;
+                margin-top: 40px;
+                width: 75%;
+            }
+        }
+    }
+    .products__first {
+        .products__background {
+            position: absolute;
+            width: 30%;
+            right: 17%;
+            top: 30px;
+        }
+    }
+    .products__second {
+        .products__background {
+            position: absolute;
+            width: 45%;
+            left: 20%;
+            top: 40px;
+        }
+    }
+    .products__third {
+        background-color: variables.$grey-color-background;
+        border-radius: 5px;
+        border: 1px solid variables.$grey-color-border;
+        .products__foreground.i {
+            position: absolute;
+            width: 85%;
+        }
+        .products__background {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .products {
+        .products__container {
+            display: flex;
+            .products__list {
+                width: 100%;
+            }
+            .products__description {
+                margin: 50px 15% 90px 5%;
+                .products__title {
+                    padding-top: 50px;
+                    font-size: 2.25em;
+                }
+                .products__text {
+                    margin-top: 5px;
+                    font-size: 1em;
+                }
+                .products__line {
+                    display: block;
+                }
+                .products__red {
+                    border-color: variables.$red-color;
+                }
+                .products__blue {
+                    border-color: variables.$blue-color;
+                }
+                .products__cyan {
+                    border-color: variables.$cyan-color;
+                }
+            }
+        }
+    }
+    .products__container.first {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .products__container.third {
+        background-color: variables.$grey-color-background;
+        .products__third {
+            padding: 0;
+            background-color: variables.$grey-color-background;
+            border: 0;
+            width: 100%;
+            .products__foreground.i {
+                width: 50%;
+                top: 40px;
+                left: 25%;
+            }
+        }
+        .products__description {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 2% 0 0;
+            padding: 12px 15% 3px 5%;
+            background-color: variables.$white-color;
+            border: 1px solid variables.$grey-color-border;
+            border-radius: 5px;
+            justify-content: center;
+            .products__line {
+                margin-bottom: 90px;
+            }
+        }
+    }
+}
