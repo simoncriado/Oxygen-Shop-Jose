@@ -4,10 +4,12 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 20px 40px variables.$black-color-shadow;
-    top: 200px;
-    padding: 30px 10%;
+    box-shadow: 0px -3px 6px variables.$black-color-shadow;
+    margin-top: 30px;
+    padding: 30px;
     .footer__information {
+        width: 100%;
+        padding-left: 3%;
         .logo__footer {
             font-family: variables.$font-family-title;
             font-style: normal;
@@ -28,6 +30,19 @@
 
         }
     }
-    // .social__media {
-    // }
+    .social__media {
+        display: flex;
+        width: 40%;
+        margin-right: 10%;
+        justify-content: end;
+        .facebook {
+            padding: 0 60%;
+        }
+    }
 }
+// @media (min-width: 1000px) {
+//     .footer {
+//         .footer__information {
+//         }
+//     }
+// }
