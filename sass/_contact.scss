@@ -2,7 +2,8 @@
 .communication {
     display: block;
     position: relative;
-    left: 7%;
+    margin-top: 80px;
+    margin-left: 8%;
     .contact__question {
         font-family: variables.$font-family-title;
         font-size: 2.5em;
@@ -24,16 +25,15 @@
         color: variables.$grey-color;
         .contact__email {
             display: flex;
-            margin-top: 15px;
+            padding-bottom: 10px;
             .contact__icon {
-                margin-right: 2%;
+                margin-right: 3%;
             }
         }
         .contact__phone {
             display: flex;
-            margin-top: 15px;
             .contact__icon {
-                margin-right: 2%;
+                margin-right: 3%;
             }
         }
     }
@@ -50,7 +50,7 @@
             border-right: none;
             border-left: none;
             border-color: variables.$grey-color-input;
-            min-width: 85%;
+            min-width: 87%;
             margin: 40px 0;
             outline: none;
         }
@@ -60,7 +60,7 @@
             border-right: none;
             border-left: none;
             border-color: variables.$grey-color-input;
-            min-width: 85%;
+            min-width: 87%;
             margin-top: 40px;
             outline: none;
         }
@@ -69,62 +69,98 @@
         }
         .contact__information {
             display: flex;
-            align-items: flex-start;
             margin-top: 20px;
-            width: 60%;
-            .conditions {
+            width: 85%;
+            .checkbox {
                 margin-right: 4%;
+                width: 5%;
+                height: 24px;
             }
             .textcheck {
                 color: variables.$grey-color-conditions;
                 font-family: variables.$font-family-text;
-                font-size: 1.302em;
+                font-size: 1.202em;
                 line-height: 1.400em;
                 font-weight: 400;
                 letter-spacing: normal;
+                margin-top: -5px;
             }
             .button__submit {
             display: flex;
             position: relative;
             justify-content: center;
-            width: 60%;
-            left: 40%;
-            margin: 20px 30px 30px 0px;
+            cursor: pointer;
+            left: 35%;
+            margin: 30px 30px 30px 0px;
             background-color: variables.$blue-color;
             color: variables.$white-color;
             font-family: variables.$font-family-text;
+            font-size: 0.900em;
             font-weight: 700;
             border-radius: 35px;
-            width: 50%;
+            width: 70%;
             height: 57px;
             border: none;
+            box-shadow: 5px 10px 14px variables.$blue-color-shadow;
             }
             .button__submit:hover {
-            box-shadow: 5px 2px 14px variables.$blue-color;
+                background-color: variables.$blue-color-hover
             }
         }
     }
 }
 @media (min-width: 1000px) {
     .communication {
-        top: 200px;
-        left: 20%;
-        .contact__data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .contact__init {
             display: flex;
-            align-items: center;
-            left: 0;
-            .contact__email {
-                width: 12%;
-                margin: 0;
-                .contact__icon {
-                    margin-right: 5%;
+            flex-direction: column;
+            width: 100%;
+            margin-top: -200px;
+            margin-left: 10%;
+            .contact__question {
+                font-size: 3.063em;
+            }
+            .contact__answer {
+                padding-top: 15px;
+            }
+            .contact__data {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-family: variables.$font-family-text;
+                font-size: 1em;
+                font-weight: 600;
+                color: variables.$grey-color;
+                margin-left: -13%;
+                .contact__email {
+                    width: 30%;
+                    .contact__icon {
+                        margin-right: 5%;
+                    }
+                }
+                .contact__phone {
+                    width: 30%;
+                    padding-bottom: 10px;
+                    .contact__icon {
+                        margin-right: 5%;
+                    }
                 }
             }
-            .contact__phone {
-                width: 12%;
-                margin: 0;
-                .contact__icon {
-                    margin-right: 5%;
+        }
+        .contact__form {
+            margin-left: 0%;
+            .clientname {
+                min-width: 70%;
+            }
+            .clientemail {
+                min-width: 70%;
+            }
+            .contact__information {
+                .textcheck {
+                    width: 70%;
                 }
             }
         }

@@ -325,7 +325,7 @@
   font-weight: 400;
   text-align: center;
   margin-top: 80px;
-  margin-bottom: -40px;
+  margin-bottom: -30px;
 }
 .conditions .pricing__box {
   display: block;
@@ -421,10 +421,10 @@
   background: #EB476E;
 }
 .conditions .pricing__box .pricing__container.red .button__red:hover {
-  background-color: #fa1e4e;
+  background-color: #FA1E4E;
 }
 .conditions .pricing__box .pricing__container.red:hover {
-  box-shadow: 5px 10px 14px #fa1e4e;
+  box-shadow: 5px 10px 14px #FA1E4E;
 }
 .conditions .pricing__box .pricing__container.blue {
   border: 1px solid #08A6E4;
@@ -462,29 +462,31 @@
 }
 
 @media (min-width: 1000px) {
+  .conditions .pricing__title {
+    margin-bottom: 0px;
+  }
   .conditions .pricing__box {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
   }
   .conditions .pricing__box .pricing__container {
-    display: flex;
-    position: relative;
     left: 0;
     top: 30px;
     flex-direction: column;
-    width: 100%;
     height: 460px;
+    margin: 20px 2%;
   }
   .conditions .pricing__box .pricing__container .pricing__category {
     margin: 40px 0;
   }
   .conditions .pricing__box .pricing__container .pricing__dates {
-    position: absolute;
-    bottom: 80px;
-    left: 0;
-    top: 160px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    right: 25%;
+    width: 100%;
   }
   .conditions .pricing__box .pricing__container .pricing__dates .pricing__info {
     display: flex;
@@ -504,7 +506,8 @@
 .communication {
   display: block;
   position: relative;
-  left: 7%;
+  margin-top: 80px;
+  margin-left: 8%;
 }
 .communication .contact__question {
   font-family: "Raleway", sans-serif;
@@ -528,17 +531,16 @@
 }
 .communication .contact__data .contact__email {
   display: flex;
-  margin-top: 15px;
+  padding-bottom: 10px;
 }
 .communication .contact__data .contact__email .contact__icon {
-  margin-right: 2%;
+  margin-right: 3%;
 }
 .communication .contact__data .contact__phone {
   display: flex;
-  margin-top: 15px;
 }
 .communication .contact__data .contact__phone .contact__icon {
-  margin-right: 2%;
+  margin-right: 3%;
 }
 .communication .contact__form {
   font-family: "Open Sans", sans-serif;
@@ -554,7 +556,7 @@
   border-right: none;
   border-left: none;
   border-color: #95989A;
-  min-width: 85%;
+  min-width: 87%;
   margin: 40px 0;
   outline: none;
 }
@@ -564,7 +566,7 @@
   border-right: none;
   border-left: none;
   border-color: #95989A;
-  min-width: 85%;
+  min-width: 87%;
   margin-top: 40px;
   outline: none;
 }
@@ -573,64 +575,98 @@
 }
 .communication .contact__form .contact__information {
   display: flex;
-  align-items: flex-start;
   margin-top: 20px;
-  width: 60%;
+  width: 85%;
 }
-.communication .contact__form .contact__information .conditions {
+.communication .contact__form .contact__information .checkbox {
   margin-right: 4%;
+  width: 5%;
+  height: 24px;
 }
 .communication .contact__form .contact__information .textcheck {
   color: #707070;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.302em;
+  font-size: 1.202em;
   line-height: 1.4em;
   font-weight: 400;
   letter-spacing: normal;
+  margin-top: -5px;
 }
 .communication .contact__form .contact__information .button__submit {
   display: flex;
   position: relative;
   justify-content: center;
-  width: 60%;
-  left: 40%;
-  margin: 20px 30px 30px 0px;
+  cursor: pointer;
+  left: 35%;
+  margin: 30px 30px 30px 0px;
   background-color: #08A6E4;
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
+  font-size: 0.9em;
   font-weight: 700;
   border-radius: 35px;
-  width: 50%;
+  width: 70%;
   height: 57px;
   border: none;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.2901960784);
 }
 .communication .contact__form .contact__information .button__submit:hover {
-  box-shadow: 5px 2px 14px #08A6E4;
+  background-color: #078fc5;
 }
 
 @media (min-width: 1000px) {
   .communication {
-    top: 200px;
-    left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .communication .contact__data {
+  .communication .contact__init {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -200px;
+    margin-left: 10%;
+  }
+  .communication .contact__init .contact__question {
+    font-size: 3.063em;
+  }
+  .communication .contact__init .contact__answer {
+    padding-top: 15px;
+  }
+  .communication .contact__init .contact__data {
     display: flex;
     align-items: center;
-    left: 0;
+    justify-content: space-evenly;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #A5A5A5;
+    margin-left: -13%;
   }
-  .communication .contact__data .contact__email {
-    width: 12%;
-    margin: 0;
+  .communication .contact__init .contact__data .contact__email {
+    width: 30%;
   }
-  .communication .contact__data .contact__email .contact__icon {
+  .communication .contact__init .contact__data .contact__email .contact__icon {
     margin-right: 5%;
   }
-  .communication .contact__data .contact__phone {
-    width: 12%;
-    margin: 0;
+  .communication .contact__init .contact__data .contact__phone {
+    width: 30%;
+    padding-bottom: 10px;
   }
-  .communication .contact__data .contact__phone .contact__icon {
+  .communication .contact__init .contact__data .contact__phone .contact__icon {
     margin-right: 5%;
+  }
+  .communication .contact__form {
+    margin-left: 0%;
+  }
+  .communication .contact__form .clientname {
+    min-width: 70%;
+  }
+  .communication .contact__form .clientemail {
+    min-width: 70%;
+  }
+  .communication .contact__form .contact__information .textcheck {
+    width: 70%;
   }
 }
 .footer {
@@ -638,9 +674,13 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 20px 40px #000002;
-  top: 200px;
-  padding: 30px 10%;
+  box-shadow: 0px -3px 6px rgba(0, 0, 0, 0.1607843137);
+  margin-top: 30px;
+  padding: 30px;
+}
+.footer .footer__information {
+  width: 100%;
+  padding-left: 3%;
 }
 .footer .footer__information .logo__footer {
   font-family: "Raleway", sans-serif;
@@ -660,6 +700,15 @@
   color: #A5A5A5;
   padding-top: 5px;
 }
+.footer .social__media {
+  display: flex;
+  width: 40%;
+  margin-right: 10%;
+  justify-content: end;
+}
+.footer .social__media .facebook {
+  padding: 0 60%;
+}
 
 * {
   box-sizing: border-box;
@@ -669,6 +718,7 @@
 
 body {
   min-width: 320px;
+  min-height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

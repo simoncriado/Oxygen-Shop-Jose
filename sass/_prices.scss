@@ -8,7 +8,7 @@
         font-weight: 400;
         text-align: center;
         margin-top: 80px;
-        margin-bottom: -40px;
+        margin-bottom: -30px;
     }
     .pricing__box {
         display: block;
@@ -148,27 +148,29 @@
 }
 @media (min-width: 1000px) {
     .conditions {
+        .pricing__title {
+            margin-bottom: 0px;
+        }
         .pricing__box {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
             .pricing__container {
-                display: flex;
-                position: relative;
                 left: 0;
                 top: 30px;
                 flex-direction: column;
-                width: 100%;
                 height: 460px;
+                margin: 20px 2%;
                 .pricing__category {
                     margin: 40px 0;
                 }
                 .pricing__dates {
-                    position: absolute;
-                    bottom: 80px;
-                    left: 0;
-                    top: 160px;
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    align-items: center;
+                    right: 25%;
+                    width: 100%;
                     .pricing__info {
                         display: flex;
                         justify-content: center;
