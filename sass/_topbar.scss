@@ -3,12 +3,13 @@
     position: fixed;
     top: 0;
     z-index: 2;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);    
+    box-shadow: 0px 3px 6px variables.$black-color-shadow;    
     background-color: variables.$white-color;
     width: 100%;
     padding: 12px 0% 12px 5%;
     .topbar__container {
         display: flex;
+        position: relative;
         align-items: center;
         justify-content: space-between;
         .logo {
@@ -30,30 +31,37 @@
                 display: none;
             }
         }
-    }
-    .nav__options {
-        list-style-type: none;
-        display: none;
-        .nav__list {
-            .nav__list__a {
-                font-family: variables.$font-family-text;
-                font-style: normal;
-                font-weight: bold;
-                letter-spacing: 0.205em;
-                font-size: 0.688em;
-                line-height: 0.4054em;
-                align-content: center;
-                text-decoration: none;
-                color: variables.$grey-color;
+        .nav__options {
+            list-style-type: none;
+            display: none;
+            position: absolute;
+            margin-top: 180px;
+            background-color: variables.$white-color;
+            left: -5%;
+            width: 105%;
+            border-bottom: 3px solid variables.$black-color-shadow;
+            .nav__list {
+                padding: 8px 5%;
+                .nav__list__a {
+                    font-family: variables.$font-family-text;
+                    font-style: normal;
+                    font-weight: bold;
+                    letter-spacing: 0.205em;
+                    font-size: 0.688em;
+                    line-height: 0.4054em;
+                    align-content: center;
+                    text-decoration: none;
+                    color: variables.$grey-color;
+                }
+                .nav__list__a:hover {
+                    color: variables.$black-color;
+                    font-style: normal;
+                }    
             }
-            .nav__list__a:hover {
-                color: variables.$black-color;
-                font-style: normal;
-            }    
         }
     }
 }
-    #nav__checkbox:checked ~ ul.nav__options li {
+    #nav__checkbox:checked ~ ul.nav__options {
         display: block;
     }
     #nav__checkbox:checked ~ label.nav__toggle .closedmenu {
@@ -64,30 +72,36 @@
     }
 @media (min-width: 1000px) {
     .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         .topbar__container {
+            display: flex;
             .logo {
                 word-spacing: normal;
+                width: 100%;
             }
             .nav__toggle {
                 display: none;
             }
+            .nav__options {
+                display: flex;
+                justify-content: space-between;
+                position: static;
+                border: none;
+                bottom: 27px;
+                margin-top: 0;
+                width: 100%;
+                .nav__list {
+                    padding: 0;
+                    .nav__list__a {
+                        padding: 0% 50px;
+                    }       
+                }
+            }        
+            .nav__list__a:hover {
+                padding-bottom: 17px;
+                border-bottom: 3px solid variables.$blue-color;
+                font-weight: bold;
+                color: variables.$black-color;
+            }
         }
-        .nav__options {
-            display: flex;
-            right: 0;
-            bottom: 27px;
-            .nav__list__a {
-                padding: 0% 50px;
-            }       
-        }        
-        .nav__list__a:hover {
-            padding-bottom: 17px;
-            border-bottom: 3px solid variables.$blue-color;
-            font-weight: bold;
-            color: variables.$black-color;
-          }
     }
 }

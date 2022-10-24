@@ -17,7 +17,7 @@
             font-size: 1.625em;
             line-height: 1em;
             color: variables.$blue-color;
-            word-spacing: -8px;
+            word-spacing: -6px;
         }
         .footer__text {
             font-family: variables.$font-family-text;
@@ -40,9 +40,12 @@
         }
     }
 }
-// @media (min-width: 1000px) {
-//     .footer {
-//         .footer__information {
-//         }
-//     }
-// }
+@media (min-width: 1000px) {
+    .footer {
+        .footer__information {
+            .logo__footer {
+                word-spacing: normal;
+            }
+        }
+    }
+}
