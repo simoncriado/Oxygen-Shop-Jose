@@ -99,7 +99,7 @@
   .navbar__container .topbar__container .nav__options .nav__list .nav__list__a {
     padding: 0% 50px;
   }
-  .navbar__container .topbar__container .nav__list__a:hover {
+  .navbar__container .topbar__container .nav__options .nav__list .nav__list__a:hover {
     padding-bottom: 17px;
     border-bottom: 3px solid #08A6E4;
     font-weight: bold;
