@@ -94,14 +94,14 @@
                     .nav__list__a {
                         padding: 0% 50px;
                     }       
+                    .nav__list__a:hover {
+                        padding-bottom: 17px;
+                        border-bottom: 3px solid variables.$blue-color;
+                        font-weight: bold;
+                        color: variables.$black-color;
+                    }
                 }
             }        
-            .nav__list__a:hover {
-                padding-bottom: 17px;
-                border-bottom: 3px solid variables.$blue-color;
-                font-weight: bold;
-                color: variables.$black-color;
-            }
         }
     }
 }
