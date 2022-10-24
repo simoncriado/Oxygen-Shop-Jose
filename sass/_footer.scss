@@ -17,7 +17,7 @@
             font-size: 1.625em;
             line-height: 1em;
             color: variables.$blue-color;
-            word-spacing: normal;
+            word-spacing: -6px;
         }
         .footer__text {
             font-family: variables.$font-family-text;
@@ -44,7 +44,7 @@
     .footer {
         .footer__information {
             .logo__footer {
-                word-spacing: -8px;
+                word-spacing: normal;
             }
         }
     }
