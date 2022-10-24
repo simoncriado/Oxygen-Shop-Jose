@@ -689,7 +689,7 @@
   font-size: 1.625em;
   line-height: 1em;
   color: #08A6E4;
-  word-spacing: -8px;
+  word-spacing: normal;
 }
 .footer .footer__information .footer__text {
   font-family: "Open Sans", sans-serif;
@@ -710,6 +710,11 @@
   padding: 0 60%;
 }
 
+@media (min-width: 1000px) {
+  .footer .footer__information .logo__footer {
+    word-spacing: -8px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
