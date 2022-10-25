@@ -6,4 +6,4 @@ OXYGENShop is the first project part of the training at OXYGEN Academy. It is th
 
 HTML, CSS, SASS and BEM.
 
-[Click](https://learningprogramming0.github.io/Oxygen-Shop/) to access the website.
+[Click here](https://learningprogramming0.github.io/Oxygen-Shop/) to access the website.
